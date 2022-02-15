@@ -30,9 +30,9 @@ public class Empleado implements Serializable{
 	private int telefono;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="id_Dep")
+	@JoinColumn(name="id_dep")
 	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
-	private Departamento idDep;
+	private Departamento departamento;
 
 	public long getId() {
 		return id;
@@ -75,13 +75,26 @@ public class Empleado implements Serializable{
 	}
 	
 	
-	public Departamento getIdDep() {
-		return idDep;
+	
+
+
+	public Departamento getDepartamento() {
+		return departamento;
 	}
 
-	public void setIdDep(Departamento idDep) {
-		this.idDep = idDep;
+	public void setDepartamento(Departamento departamento) {
+		this.departamento = departamento;
 	}
+
+
+
+
+
+
+
+
+
+
 
 
 
