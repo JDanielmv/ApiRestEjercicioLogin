@@ -1,5 +1,10 @@
 package com.formacionspring.app.apirest.dao;
 
-public class EmpleadoDao {
+import org.springframework.data.repository.CrudRepository;
+
+import com.formacionspring.app.apirest.entity.Empleado;
+
+
+public interface EmpleadoDao extends CrudRepository<Empleado, Long>{
 
 }
